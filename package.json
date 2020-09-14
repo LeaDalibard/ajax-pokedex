@@ -1,0 +1,22 @@
+{
+  "name": "ajax-pokedex",
+  "version": "1.0.0",
+  "description": "## Practical Information",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeaDalibard/ajax-pokedex.git"
+  },
+  "author": "Lea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeaDalibard/ajax-pokedex/issues"
+  },
+  "homepage": "https://github.com/LeaDalibard/ajax-pokedex#readme",
+  "devDependencies": {
+    "npm-start-command": "^1.0.1"
+  }
+}
