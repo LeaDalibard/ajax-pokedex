@@ -9,8 +9,42 @@
 </head>
 <body>
 
+<div class="container">
+    <header>
+        <h1>Pokedex</h1>
+
+    </header>
+    <div class="content">
+        <section class="material">
+            <form action="#" method="post">
+                <div class="field">
+                    <label for="pokemon">New search ?</label>
+                    <input type="text" name="pokemon" id="pokemon" />
+                </div>
+                <div class="actions">
+                    <button type="button" id="search">Search</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="result">
+            <img src="" id="pokImg" alt="Pokemon searched">
+            <dl>
+                <dt>Id number:</dt>
+                <dd id="idNum"></dd>
+                <dt>Pokemon:</dt>
+                <dd id="name"></dd>
+                <dt>Moves:</dt>
+                <dd id="moves">-</dd>
+            </dl>
 
 
-<script src="./script.js"></script>
+        </section>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
