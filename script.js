@@ -11,11 +11,21 @@
                     document.getElementById("idNum").innerHTML = pokemon.id
                     document.getElementById("name").innerHTML = pokemon.name
                     img = pokemon.sprites
-                    document.getElementById("pokImg").src =img.front_default
+                    document.getElementById("pokImg").src = img.front_default
+
                     arrMoves = pokemon.moves
-                    let moves = groupBy(arrMoves, "move")
-                    console.log(arrMoves)
-                    console.log(moves)
+                    let finalMoves = []
+                    const randomArray = []
+                    for (let i = 0; i < 4; i++) {
+                        randomArray.push(Math.floor(Math.random() * arrMoves.length))
+                    }
+                    for (let i = 0; i < 4; i++) {
+                        finalMoves.push(arrMoves[randomArray[i]].move.name)
+                    }
+
+                    document.getElementById("pokMove").innerHTML = finalMoves
+
+
                 }
             )
     }
