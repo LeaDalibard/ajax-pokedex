@@ -32,7 +32,10 @@
             .then(response => response.json())
             .then(pokemon => {
                 var nextEvol=pokemon
-                if(pokemon.evolves_from_species==null){ document.getElementById("preEvolname").innerHTML = "First evolution"}
+                if(pokemon.evolves_from_species==null){ document.getElementById("preEvolname").innerHTML = "First evolution";
+                    document.getElementById("preEvol-1").src =" ";
+                    document.getElementById("preEvol-1").alt ="No previous evolution";
+                }
                 else {
                     prevEvol = pokemon.evolves_from_species.name
                     document.getElementById("preEvolname").innerHTML += prevEvol
