@@ -5,29 +5,34 @@
 
     function getPokemon() {
         let pokeName = document.getElementById("pokemon").value
+
         fetch("https://pokeapi.co/api/v2/pokemon/" + pokeName + "/")
             .then(response => response.json())
             .then(pokemon => {
-                    document.getElementById("idNum").innerHTML = pokemon.id
-                    document.getElementById("name").innerHTML = pokemon.name
-                    img = pokemon.sprites
-                    document.getElementById("pokImg").src = img.front_default
+                document.getElementById("idNum").innerHTML = pokemon.id
+                document.getElementById("name").innerHTML = pokemon.name
+                img = pokemon.sprites
+                document.getElementById("pokImg").src = img.front_default
 
-                    arrMoves = pokemon.moves
-                    let finalMoves = []
-                    const randomArray = []
-                    for (let i = 0; i < 4; i++) {
-                        randomArray.push(Math.floor(Math.random() * arrMoves.length))
-                    }
-                    for (let i = 0; i < 4; i++) {
-                        finalMoves.push(arrMoves[randomArray[i]].move.name)
-                    }
-
-                    document.getElementById("pokMove").innerHTML = finalMoves
-
-
+                arrMoves = pokemon.moves
+                let finalMoves = []
+                const randomArray = []
+                for (let i = 0; i < 4; i++) {
+                    randomArray.push(Math.floor(Math.random() * arrMoves.length))
                 }
-            )
+                for (let i = 0; i < 4; i++) {
+                    finalMoves.push(arrMoves[randomArray[i]].move.name)
+                }
+                var unique = [...new Set(finalMoves)];
+                document.getElementById("pokMove").innerHTML = unique.join(', ');
+            })
+        /*____________________________________*/
+
+      fetch("https://pokeapi.co/api/v2/pokemon-species/"+ pokeName + "/")
+         .then(response => response.json())
+          .then(pokemon => console.log(pokemon))
+
+
     }
 })();
 /*
