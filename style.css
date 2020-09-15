@@ -1,6 +1,5 @@
 .container {
-    border-radius: 5px;
-    padding: 10px; }
+  }
 
 #pokedex{
     width:60%;
@@ -21,18 +20,19 @@
 
 .mainImage{
     position: absolute;
-    top: 25%;
+    top: 240px;
     left: 31%;
 }
 .identification{
     position: absolute;
     top: 38%;
-    left: 31%;
+    left: 384px;
+    width:229px;
 }
 .moves{
-    width: 18%;
+    width: 261px;
     position: absolute;
-    top: 28%;
-    right: 26%;
+    top: 236px;
+    left: 776px;
     color: whitesmoke;
 }
