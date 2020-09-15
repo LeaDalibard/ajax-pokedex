@@ -13,3 +13,10 @@
     top: 25%;
     left: 31%;
 }
+.moves{
+    width: 20%;
+    position: absolute;
+    top: 26%;
+    right: 25%;
+    color: whitesmoke;
+}
