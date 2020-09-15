@@ -32,14 +32,26 @@
             .then(response => response.json())
             .then(pokemon => {
                     url = pokemon.evolution_chain.url;
+                console.log(url);
                     return fetch(url)
                 }
             )
                .then(response => response.json())
-              .then(specie => {
-                  console.log(specie)
-
+              .then(data => {
+                  isBaby=data.chain.evolves_to[0].is_baby
+                  console.log(isBaby)
+                  if (isBaby===false) {evolPrev=data.chain.evolves_to[0].species.name}
+                  console.log(evolPrev)
+                  //document.getElementById("preEvolname").innerHTML =prevEvol
+                //  urlPrev= "https://pokeapi.co/api/v2/pokemon/" + prevEvol + "/"
+         //         return fetch(urlPrev)
               })
+           // .then(response => response.json())
+           // .then(evolPrev=>{
+           //     imgPrev = evolPrev.sprites
+            //    console.log(evolPrev)
+           //   document.getElementById("preEvol-1").src = imgPrev.front_default
+          //  })
     }
 })();
 /*
