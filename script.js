@@ -31,17 +31,23 @@
         fetch("https://pokeapi.co/api/v2/pokemon-species/" + pokeName + "/")
             .then(response => response.json())
             .then(pokemon => {
-                prevEvol = pokemon.evolves_from_species.name
-                document.getElementById("preEvolname").innerHTML = prevEvol
-                urlPrev = "https://pokeapi.co/api/v2/pokemon/" + prevEvol + "/"
-                return fetch(urlPrev)
+                if(pokemon.evolves_from_species==null){ document.getElementById("preEvolname").innerHTML = "First evolution"}
+                else {
+                    prevEvol = pokemon.evolves_from_species.name
+                    document.getElementById("preEvolname").innerHTML = prevEvol
+                    urlPrev = "https://pokeapi.co/api/v2/pokemon/" + prevEvol + "/"
+                    return fetch(urlPrev)
+                        .then(response => response.json())
+                        .then(evolPrev => {
+                            imgPrev = evolPrev.sprites
+                            console.log(evolPrev)
+                            document.getElementById("preEvol-1").src = imgPrev.front_default
+                        })
+
+                }
+
             })
-            .then(response => response.json())
-            .then(evolPrev => {
-                imgPrev = evolPrev.sprites
-                console.log(evolPrev)
-                document.getElementById("preEvol-1").src = imgPrev.front_default
-            })
+
 
 
     }
