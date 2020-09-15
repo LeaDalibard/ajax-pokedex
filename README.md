@@ -32,3 +32,7 @@ There are a couple of pokemon that don't play with the normal rules, add code so
 
 - Ditto only has 1 move.
 - Eevee has 6 evolutions.
+
+## Link to the page :
+[ https://leadalibard.github.io/ajax-pokedex/]( https://leadalibard.github.io/ajax-pokedex/)
+
