@@ -1,3 +1,7 @@
+.container {
+    border-radius: 5px;
+    padding: 10px; }
+
 #pokedex{
     width:60%;
     display: block;
@@ -6,6 +10,12 @@
 }
 .pokedex{
     position: relative;
+}
+
+.material{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(245,20,13,1) 0%, rgba(184,56,70,1) 28%, rgba(162,69,90,1) 38%, rgba(26,148,217,1) 100%);
+    padding: 10px;
 }
 
 .mainImage{
@@ -22,6 +32,6 @@
     width: 18%;
     position: absolute;
     top: 28%;
-    right: 25%;
+    right: 26%;
     color: whitesmoke;
 }
