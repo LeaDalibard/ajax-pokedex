@@ -28,11 +28,18 @@
             })
         /*____________________________________*/
 
-      fetch("https://pokeapi.co/api/v2/pokemon-species/"+ pokeName + "/")
-         .then(response => response.json())
-          .then(pokemon => console.log(pokemon))
+        fetch("https://pokeapi.co/api/v2/pokemon-species/" + pokeName + "/")
+            .then(response => response.json())
+            .then(pokemon => {
+                    url = pokemon.evolution_chain.url;
+                    return fetch(url)
+                }
+            )
+               .then(response => response.json())
+              .then(specie => {
+                  console.log(specie)
 
-
+              })
     }
 })();
 /*
